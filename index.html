@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mabronoma Herbal Centre</title>
+    <link rel="stylesheet" href="styles.css"> <!-• Link to the CSS file -->
+</head>
+<body>
+    <header>
+        <h1>Mabronoma Herbal Centre</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                <li><a href="#about" onclick="showPage('about')">About Us</a></li>
+                <li><a href="#products" onclick="showPage('products')">Herbal Products</a></li>
+                <li><a href="#services" onclick="showPage('services')">Services</a></li>
+                <li><a href="#contact" onclick="showPage('contact')">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="page">
+        <h2>Welcome to Mabronoma Herbal Centre</h2>
+        <img src="Images/Herbal.webp" alt="Herbal Centre Home Image" height="200" width="200">
+        <p>Your trusted source for herbal remedies. Discover our latest promotions and offerings!</p>
+        <h3>About Us</h3>
+        <p>Mabronoma Herbal Centre is dedicated to providing high-quality herbal products and personalized consultations. Our mission is to empower individuals through natural healing and education about herbal medicine.</p>
+        <h3>Explore Our Products</h3>
+        <p>We offer a wide range of herbal teas, salves, and essential oils, all crafted to support your health and well-being.</p>
+    </section>
+
+    <section id="about" class="page" style="display:none;">
+        <h2>About Us</h2>
+        <h3>Overview</h3>
+        <p>Mabronoma Herbal Centre is a dedicated facility focused on promoting health and wellness through the use of natural herbal remedies. Situated in Pokuase-Abensu, the centre aims to provide an alternative approach to health care, catering to individuals seeking natural solutions for various health issues.</p>
+        <h3>Mission</h3>
+        <p>The mission of Mabronoma Herbal Centre is to empower individuals by providing access to high-quality herbal products and consultations. The centre is committed to educating the community about the benefits of herbal medicine, ensuring that customers are informed and confident in their health choices.</p>
+    </section>
+
+    <section id="contact" class="page" style="display:none;">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, comments, or need assistance, feel free to reach out to us. We are here to help!</p>
+        <h3>Get in Touch</h3>
+        <p>Phone: <strong>0244443881</strong></p>
+        <p>Email: <a href="mailto:mabronomaherbalcentre@gmail.com" style="color: #4CAF50;">mabronomaherbalcentre@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/0244443881" style="color: #4CAF50;">Message us on WhatsApp!</a></p>
+        <h3>Our Location</h3>
+        <p>We are located at Pokuase-Abensu. Visit us to explore our products and services in person!</p>
+        <form id="contact-form">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <section id="products" class="page" style="display:none;">
+        <h2>Herbal Products</h2>
+        <img src="Images/Products.webp" alt="Herbal Products Image" height="200" width="200">
+        <div class="products-container">
+            <div class="sidebar"></div>
+            <div class="main-content">
+                <div id="product-list">
+                    <h3>Available Products:</h3>
+                    <div class="product-item">
+                        <h4>Herbal Tea</h4>
+                        <p>A soothing blend of herbs known for its calming effects. Ideal for reducing stress and promoting relaxation.</p>
+                        <img src="Images/Best_Teas_big_898_1.jpg" alt="Herbal Tea" height="200" width="200">
+                    </div>
+                    <div class="product-item">
+                        <h4>Natural Salve</h4>
+                        <p>This salve is made from soothing herbs and oils, perfect for healing minor cuts, burns, and skin irritations.</p>
+                        <img src="Images/salve.jpeg" alt="Natural Salve" height="200" width="200">
+                    </div>
+                    <div class="product-item">
+                        <h4>Eucalyptus Oil</h4>
+                        <p>Known for its refreshing aroma, eucalyptus oil is commonly used for respiratory issues and as a natural insect repellent.</p>
+                        <img src="Images/oil.jpeg" alt="Eucalyptus Oil" height="200" width="200">
+                    </div>
+                    <div class="product-item">
+                        <h4>Ginger Root</h4>
+                        <p>Ginger is famous for its anti-inflammatory properties and is often used to alleviate digestive issues and nausea.</p>
+                        <img src="Images/Ginger root.jpg" alt="Ginger Root" height="200" width="200">
+                    </div>
+                    <div class="product-item">
+                        <h4>Turmeric Capsules</h4>
+                        <p>Turmeric is well-known for its powerful anti-inflammatory and antioxidant effects, supporting overall health and wellness.</p>
+                        <img src="Images/VK_turmeric_capsule.jpg" alt="Turmeric Capsules" height="200" width="200">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="page" style="display:none;">
+        <h2>Our Services</h2>
+        <p>At Mabronoma Herbal Centre, we offer a variety of services designed to support your health and well-being. Our services include:</p>
+        <ul>
+            <li><strong>Personalized Herbal Consultations:</strong> Receive tailored advice from our expert herbalists based on your individual health needs.</li>
+            <li><strong>Workshops and Educational Events:</strong> Participate in workshops that teach you about herbal remedies and their uses.</li>
+            <li><strong>Product Sales:</strong> Access a wide range of high-quality herbal products crafted to promote health and wellness.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Mabronoma Herbal Centre. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(page) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(p => p.style.display = 'none'); // Hide all pages
+            document.getElementById(page).style.display = 'block'; // Show the selected page
+        }
+
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you for your message!");
+            this.reset();
+            showPage('home'); // Redirect to home after submission
+        });
+
+        // Show home page by default
+        showPage('home');
+    </script>
+</body>
+</html>
